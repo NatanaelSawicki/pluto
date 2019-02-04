@@ -1,7 +1,7 @@
 package cachehandler;
 
-import customexceptions.JulyClassNotFoundException;
-import customexceptions.JulyIOException;
+import customexceptions.PlutoClassNotFoundException;
+import customexceptions.PlutoIOException;
 import java.util.HashMap;
 import java.util.List;
 import serializer.SerializeHandler;
@@ -33,12 +33,12 @@ public class CacheHandler {
     }
     
     public static void deserializeCache(String serial) 
-            throws JulyIOException, JulyClassNotFoundException{
+            throws PlutoIOException, PlutoClassNotFoundException{
         cache = (HashMap<String, Object>) SerializeHandler.deserialize(serial);
     }
     
     public static String serializeCache() 
-            throws JulyIOException{
+            throws PlutoIOException{
         return SerializeHandler.serialize(cache);
     }
     

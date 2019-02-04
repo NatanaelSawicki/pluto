@@ -1,6 +1,6 @@
 package dialogs;
 
-import enums.JulyDialogEnum;
+import enums.PlutoDialogEnum;
 import exception.ExceptionHandler;
 import javax.swing.JOptionPane;
 import sysutils.SystemHandler;
@@ -13,28 +13,28 @@ public class Dialogs {
     
     public static void showDialog(String dialogMessage,
             String dialogTitle){
-        JOptionPane.showMessageDialog(null, dialogMessage, dialogTitle, JulyDialogEnum.INFORMATION.getValue());
+        JOptionPane.showMessageDialog(null, dialogMessage, dialogTitle, PlutoDialogEnum.INFORMATION.getValue());
     }
     
     public static void showDialog(String dialogMessage,
             String dialogTitle,
-            JulyDialogEnum dialogType){
+            PlutoDialogEnum dialogType){
         JOptionPane.showMessageDialog(null, dialogMessage, dialogTitle, dialogType.getValue());
     }
     
     public static boolean confirmDialog(String dialogMessage){
-        return JOptionPane.showConfirmDialog(null, dialogMessage) == JulyDialogEnum.YES_OPTION.getValue();
+        return JOptionPane.showConfirmDialog(null, dialogMessage) == PlutoDialogEnum.YES_OPTION.getValue();
     }
     
     public static boolean confirmDialog(String dialogMessage,
             String dialogTitle){
-        return JOptionPane.showConfirmDialog(null, dialogMessage, dialogTitle, JulyDialogEnum.YES_NO_CONFIRM.getValue()) == JulyDialogEnum.YES_OPTION.getValue();
+        return JOptionPane.showConfirmDialog(null, dialogMessage, dialogTitle, PlutoDialogEnum.YES_NO_CONFIRM.getValue()) == PlutoDialogEnum.YES_OPTION.getValue();
     }
     
     public static boolean confirmDialog(String dialogMessage,
             String dialogTitle,
-            JulyDialogEnum dialogType){
-        return JOptionPane.showConfirmDialog(null, dialogMessage, dialogTitle, dialogType.getValue()) == JulyDialogEnum.YES_OPTION.getValue();
+            PlutoDialogEnum dialogType){
+        return JOptionPane.showConfirmDialog(null, dialogMessage, dialogTitle, dialogType.getValue()) == PlutoDialogEnum.YES_OPTION.getValue();
     }
     
     public static String inputDialog(String dialogMessage){
@@ -43,12 +43,12 @@ public class Dialogs {
     
     public static String inputDialog(String dialogMessage,
             String dialogTitle){
-        return JOptionPane.showInputDialog(null, dialogMessage, dialogTitle, JulyDialogEnum.QUESTION.getValue());
+        return JOptionPane.showInputDialog(null, dialogMessage, dialogTitle, PlutoDialogEnum.QUESTION.getValue());
     }
     
     public static String inputDialog(String dialogMessage,
             String dialogTitle,
-            JulyDialogEnum dialogType){
+            PlutoDialogEnum dialogType){
         return JOptionPane.showInputDialog(null, dialogMessage, dialogTitle, dialogType.getValue());
     }
     
@@ -60,10 +60,10 @@ public class Dialogs {
         
         if(confirmToShowExceptionDetails){
             if(confirmDialog(errorMessage.concat("\n").concat(confirmMessage),"Error")){
-                showDialog(ExceptionHandler.getExceptionDetails(exception), "Error", JulyDialogEnum.ERROR);
+                showDialog(ExceptionHandler.getExceptionDetails(exception), "Error", PlutoDialogEnum.ERROR);
             }
         }else{
-            showDialog(errorMessage, "Error", JulyDialogEnum.ERROR);
+            showDialog(errorMessage, "Error", PlutoDialogEnum.ERROR);
         }
         
         if(abortSystem){

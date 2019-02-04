@@ -1,8 +1,8 @@
 package com.br.julymvn.file;
 
-import customexceptions.JulyCustomException;
-import customexceptions.JulyFileNotFoundException;
-import customexceptions.JulyIOException;
+import customexceptions.PlutoCustomException;
+import customexceptions.PlutoFileNotFoundException;
+import customexceptions.PlutoIOException;
 import exception.ExceptionHandler;
 import java.io.BufferedReader;
 import java.io.File;
@@ -18,11 +18,11 @@ public class FileHandler {
     private static HashMap<String, File> listDeletedFiles = null;
     
     public static File createFileObjet(String dir) 
-            throws JulyFileNotFoundException{
+            throws PlutoFileNotFoundException{
         if(fileExists(dir)){
             return new File(dir);
         }else{
-            throw new JulyFileNotFoundException();
+            throw new PlutoFileNotFoundException();
         }
     }
     
@@ -106,13 +106,13 @@ public class FileHandler {
     }
     
     public static boolean addTempFile(File tempFile) 
-            throws JulyCustomException{
+            throws PlutoCustomException{
         boolean funcRet = false;
         try{
             listTempFiles.put(tempFile.getName(), tempFile);
             funcRet = true;
         }catch(Exception ex){
-            throw new JulyCustomException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoCustomException(ExceptionHandler.getExceptionDetails(ex));
         }
         return funcRet;
     }
@@ -125,30 +125,30 @@ public class FileHandler {
     public static File createTempFile(String prefix, 
             String sufix,
             String dir) 
-            throws JulyIOException, JulyCustomException{
+            throws PlutoIOException, PlutoCustomException{
         try {
             File fTemp = File.createTempFile(prefix, sufix, new File(dir));
             addTempFile(fTemp);
             return File.createTempFile(prefix, sufix, new File(dir));
         } catch (IOException ex) {
-            throw new JulyIOException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoIOException(ExceptionHandler.getExceptionDetails(ex));
         }
     }
     
     public static boolean createFile(String dir)
-            throws JulyIOException {
+            throws PlutoIOException {
         if (!fileExists(dir)) {
             try {
                 return new File(dir).createNewFile();
             } catch (IOException ex) {
-                throw new JulyIOException(ExceptionHandler.getExceptionDetails(ex));
+                throw new PlutoIOException(ExceptionHandler.getExceptionDetails(ex));
             }
         }
         return false;
     }
 
     public static String readFile(String dir)
-            throws JulyFileNotFoundException, JulyIOException {
+            throws PlutoFileNotFoundException, PlutoIOException {
         StringBuilder fileContent = new StringBuilder();
         if (fileExists(dir) && canRead(dir)) {
             File f = new File(dir);
@@ -159,16 +159,16 @@ public class FileHandler {
                     fileContent.append(lineRead);
                 }
             } catch (java.io.FileNotFoundException ex) {
-                throw new JulyFileNotFoundException(ExceptionHandler.getExceptionDetails(ex));
+                throw new PlutoFileNotFoundException(ExceptionHandler.getExceptionDetails(ex));
             } catch (IOException ex) {
-                throw new JulyIOException(ExceptionHandler.getExceptionDetails(ex));
+                throw new PlutoIOException(ExceptionHandler.getExceptionDetails(ex));
             }
         }
         return fileContent.toString();
     }
 
     public static boolean isFileEmpty(String dir)
-            throws JulyIOException, JulyFileNotFoundException {
+            throws PlutoIOException, PlutoFileNotFoundException {
         if (fileExists(dir) && canRead(dir)) {
             try {
                 return new BufferedReader(
@@ -177,9 +177,9 @@ public class FileHandler {
                         )
                 ).readLine() == null;
             } catch (java.io.FileNotFoundException ex) {
-                throw new JulyFileNotFoundException(ExceptionHandler.getExceptionDetails(ex));
+                throw new PlutoFileNotFoundException(ExceptionHandler.getExceptionDetails(ex));
             } catch (IOException ex) {
-                throw new JulyIOException(ExceptionHandler.getExceptionDetails(ex));
+                throw new PlutoIOException(ExceptionHandler.getExceptionDetails(ex));
             }
         }
         return false;

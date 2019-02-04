@@ -1,8 +1,8 @@
 package dbhandler;
 
-import enums.JulyDatabaseEnum;
-import customexceptions.JulyNoSuchDatabaseEnum;
-import customexceptions.JulySQLException;
+import enums.PlutoDatabaseEnum;
+import customexceptions.PlutoNoSuchDatabaseEnum;
+import customexceptions.PlutoSQLException;
 import exception.ExceptionHandler;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -16,8 +16,8 @@ public class DatabaseHandler {
     private static Connection dbConn = null;
     
     public static void createConnection(HashMap properties,
-            JulyDatabaseEnum param)
-            throws JulySQLException, ClassNotFoundException, JulyNoSuchDatabaseEnum {
+            PlutoDatabaseEnum param)
+            throws PlutoSQLException, ClassNotFoundException, PlutoNoSuchDatabaseEnum {
         try {
             switch (param) {
                 case PostgreSQL:
@@ -29,20 +29,6 @@ public class DatabaseHandler {
                     break;
                 case MySQL:
                     Class.forName("com.mysql.jdbc.Driver");
-                    url      = (String) properties.get("url");
-                    username = (String) properties.get("username");
-                    password = (String) properties.get("password");
-                    dbConn = DriverManager.getConnection(url, username, password);
-                    break;
-                case IBM_DB2_App:
-                    Class.forName("com.ibm.db2.jdbc.app.DB2Driver");
-                    url      = (String) properties.get("url");
-                    username = (String) properties.get("username");
-                    password = (String) properties.get("password");
-                    dbConn = DriverManager.getConnection(url, username, password);
-                    break;
-                case IBM_DB2_Net:
-                    Class.forName("com.ibm.db2.jdbc.net.DB2Driver");
                     url      = (String) properties.get("url");
                     username = (String) properties.get("username");
                     password = (String) properties.get("password");
@@ -77,12 +63,12 @@ public class DatabaseHandler {
                     dbConn = DriverManager.getConnection(url, username, password);
                     break;
                 default:
-                    throw new JulyNoSuchDatabaseEnum();
+                    throw new PlutoNoSuchDatabaseEnum();
             }
         } catch (ClassNotFoundException ex) {
             throw new ClassNotFoundException(ExceptionHandler.getExceptionDetails(ex));
         } catch (SQLException ex) {
-            throw new JulySQLException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoSQLException(ExceptionHandler.getExceptionDetails(ex));
         }
     }
 
@@ -105,19 +91,19 @@ public class DatabaseHandler {
     }
 
     public static void executePureSQL(String sql) 
-            throws JulySQLException{
+            throws PlutoSQLException{
         if(dbConn != null){
             try {
                 PreparedStatement ps = dbConn.prepareStatement(sql);
                 ps.execute();
             } catch (SQLException ex) {
-                throw new JulySQLException(ExceptionHandler.getExceptionDetails(ex));
+                throw new PlutoSQLException(ExceptionHandler.getExceptionDetails(ex));
             }
         }
     }
     
     public static ResultSet executePureSQLQuery(String sql) 
-            throws JulySQLException{
+            throws PlutoSQLException{
         ResultSet rs = null;
         if(dbConn != null){
             try {
@@ -125,27 +111,27 @@ public class DatabaseHandler {
                 sql = sql.toLowerCase();
                 return ps.executeQuery();
             } catch (SQLException ex) {
-                throw new JulySQLException(ExceptionHandler.getExceptionDetails(ex));
+                throw new PlutoSQLException(ExceptionHandler.getExceptionDetails(ex));
             }
         }
         return rs;
     }
     
     public static boolean createTable(String sql)
-            throws JulySQLException {
+            throws PlutoSQLException {
         if (dbConn != null) {
             try {
                 PreparedStatement ps = dbConn.prepareStatement(sql);
                 return ps.execute();
             } catch (SQLException ex) {
-                throw new JulySQLException(ExceptionHandler.getExceptionDetails(ex));
+                throw new PlutoSQLException(ExceptionHandler.getExceptionDetails(ex));
             }
         }
         return false;
     }
 
     public static boolean tableExists(String tableName)
-            throws JulySQLException {
+            throws PlutoSQLException {
 
         if (dbConn != null) {
             try {
@@ -161,7 +147,7 @@ public class DatabaseHandler {
                     return rs.getBoolean("exists");
                 }
             } catch (SQLException ex) {
-                throw new JulySQLException(ExceptionHandler.getExceptionDetails(ex));
+                throw new PlutoSQLException(ExceptionHandler.getExceptionDetails(ex));
             }
         }
 

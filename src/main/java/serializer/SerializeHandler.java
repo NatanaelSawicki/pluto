@@ -1,7 +1,7 @@
 package serializer;
 
-import customexceptions.JulyClassNotFoundException;
-import customexceptions.JulyIOException;
+import customexceptions.PlutoClassNotFoundException;
+import customexceptions.PlutoIOException;
 import exception.ExceptionHandler;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -13,7 +13,7 @@ import java.util.Base64;
 public class SerializeHandler {
     
     public static String serialize(Object param) 
-            throws JulyIOException{
+            throws PlutoIOException{
         try {
             ByteArrayOutputStream byteOutput = new ByteArrayOutputStream();
             ObjectOutputStream objOutput = new ObjectOutputStream(byteOutput);
@@ -23,12 +23,12 @@ public class SerializeHandler {
             byteOutput.close();
             return new String(Base64.getEncoder().encode(byteOutput.toByteArray()));
         } catch (IOException ex) {
-            throw new JulyIOException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoIOException(ExceptionHandler.getExceptionDetails(ex));
         }
     }
     
     public static Object deserialize(String param) 
-            throws JulyIOException, JulyClassNotFoundException{
+            throws PlutoIOException, PlutoClassNotFoundException{
         try{
             byte[] bArr = Base64.getDecoder().decode(param.getBytes());
             ByteArrayInputStream byteInput = new ByteArrayInputStream(bArr);
@@ -38,9 +38,9 @@ public class SerializeHandler {
             objInput.close();
             return obj;
         }catch(IOException ex){
-            throw new JulyIOException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoIOException(ExceptionHandler.getExceptionDetails(ex));
         } catch (ClassNotFoundException ex) {
-            throw new JulyClassNotFoundException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoClassNotFoundException(ExceptionHandler.getExceptionDetails(ex));
         }
     }
     

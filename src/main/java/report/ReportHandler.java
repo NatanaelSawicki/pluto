@@ -1,7 +1,7 @@
 package report;
 
 import exception.ExceptionHandler;
-import customexceptions.JulyJasperReportException;
+import customexceptions.PlutoJasperReportException;
 import java.sql.Connection;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -14,13 +14,13 @@ public class ReportHandler {
     
     public static void showReport(String jasperReportLocation,
             Connection databaseConnection) 
-            throws JulyJasperReportException{
+            throws PlutoJasperReportException{
         try {
             JasperPrint jasperReport = JasperFillManager.fillReport(jasperReportLocation, null, databaseConnection);
             JasperViewer jasperViewer = new JasperViewer(jasperReport);
             jasperViewer.setVisible(true);
         } catch (JRException ex) {
-            throw new JulyJasperReportException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoJasperReportException(ExceptionHandler.getExceptionDetails(ex));
         }
     }
 }

@@ -1,11 +1,11 @@
 package sysutils;
 
-import enums.JulyJavaVersionEnum;
-import enums.JulyMacVersionEnum;
-import enums.JulyOperationalSystemEnum;
-import enums.JulyWindowsVersionEnum;
-import customexceptions.JulyClassNotFoundException;
-import customexceptions.JulyIOException;
+import enums.PlutoJavaVersionEnum;
+import enums.PlutoMacVersionEnum;
+import enums.PlutoOperationalSystemEnum;
+import enums.PlutoWindowsVersionEnum;
+import customexceptions.PlutoClassNotFoundException;
+import customexceptions.PlutoIOException;
 import java.util.HashMap;
 import org.apache.commons.lang3.SystemUtils;
 import serializer.SerializeHandler;
@@ -27,7 +27,7 @@ public class SystemHandler {
         return SystemUtils.FILE_ENCODING;
     }
 
-    public static boolean isJavaVersion(JulyJavaVersionEnum param) {
+    public static boolean isJavaVersion(PlutoJavaVersionEnum param) {
         switch (param) {
             case JAVA_10:
                 return SystemUtils.IS_JAVA_10;
@@ -56,7 +56,7 @@ public class SystemHandler {
         }
     }
 
-    public static boolean isOperationalSystem(JulyOperationalSystemEnum param) {
+    public static boolean isOperationalSystem(PlutoOperationalSystemEnum param) {
         switch (param) {
             case OS_IBM_400:
                 return SystemUtils.IS_OS_400;
@@ -94,7 +94,7 @@ public class SystemHandler {
         }
     }
 
-    public static boolean isMacVersion(JulyMacVersionEnum param) {
+    public static boolean isMacVersion(PlutoMacVersionEnum param) {
         switch (param) {
             case MAC_CHEETAH:
                 return SystemUtils.IS_OS_MAC_OSX_CHEETAH;
@@ -124,7 +124,7 @@ public class SystemHandler {
 
     }
 
-    public static boolean isWindowsVersion(JulyWindowsVersionEnum param) {
+    public static boolean isWindowsVersion(PlutoWindowsVersionEnum param) {
         switch (param) {
             case WINDOWS_10:
                 return SystemUtils.IS_OS_WINDOWS_10;
@@ -260,7 +260,7 @@ public class SystemHandler {
     }
 
     public static void setSerializedUserProperties(String serial)
-            throws JulyIOException, JulyClassNotFoundException {
+            throws PlutoIOException, PlutoClassNotFoundException {
         userProperties = (HashMap<String, Object>) SerializeHandler.deserialize(serial);
     }
 
@@ -270,7 +270,7 @@ public class SystemHandler {
     }
 
     public static String getSerializedProperties()
-            throws JulyIOException {
+            throws PlutoIOException {
         return hasAnyPropertySet() ? SerializeHandler.serialize(userProperties) : null;
     }
 

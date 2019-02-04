@@ -1,11 +1,11 @@
 package invokemethod;
 
-import customexceptions.JulyIllegalAccessException;
-import customexceptions.JulyIllegalArgumentException;
-import customexceptions.JulyInvocationTargetException;
-import customexceptions.JulyNoSuchMethodException;
-import customexceptions.JulyNullPointerException;
-import customexceptions.JulySecurityException;
+import customexceptions.PlutoIllegalAccessException;
+import customexceptions.PlutoIllegalArgumentException;
+import customexceptions.PlutoInvocationTargetException;
+import customexceptions.PlutoNoSuchMethodException;
+import customexceptions.PlutoNullPointerException;
+import customexceptions.PlutoSecurityException;
 import exception.ExceptionHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -16,12 +16,12 @@ public class MethodHandler {
             Class methodClass,
             String methodName,
             Object... methodArguments) 
-            throws JulyNoSuchMethodException, 
-            JulySecurityException, 
-            JulyIllegalAccessException, 
-            JulyIllegalArgumentException, 
-            JulyInvocationTargetException, 
-            JulyNullPointerException {
+            throws PlutoNoSuchMethodException, 
+            PlutoSecurityException, 
+            PlutoIllegalAccessException, 
+            PlutoIllegalArgumentException, 
+            PlutoInvocationTargetException, 
+            PlutoNullPointerException {
         try {
             if (methodArguments == null) {
                 Method method = methodClass.getDeclaredMethod(methodName);
@@ -34,17 +34,17 @@ public class MethodHandler {
             }
 
         } catch (NoSuchMethodException ex) {
-            throw new JulyNoSuchMethodException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoNoSuchMethodException(ExceptionHandler.getExceptionDetails(ex));
         } catch (SecurityException ex) {
-            throw new JulySecurityException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoSecurityException(ExceptionHandler.getExceptionDetails(ex));
         } catch (IllegalAccessException ex) {
-            throw new JulyIllegalAccessException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoIllegalAccessException(ExceptionHandler.getExceptionDetails(ex));
         } catch (IllegalArgumentException ex) {
-            throw new JulyIllegalArgumentException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoIllegalArgumentException(ExceptionHandler.getExceptionDetails(ex));
         } catch (InvocationTargetException ex) {
-            throw new JulyInvocationTargetException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoInvocationTargetException(ExceptionHandler.getExceptionDetails(ex));
         } catch (NullPointerException ex) {
-            throw new JulyNullPointerException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoNullPointerException(ExceptionHandler.getExceptionDetails(ex));
         }
     }
 
@@ -52,12 +52,12 @@ public class MethodHandler {
             Class methodClass,
             String methodName,
             Object... methodArguments) 
-            throws JulyNoSuchMethodException, 
-            JulySecurityException, 
-            JulyIllegalAccessException, 
-            JulyIllegalArgumentException, 
-            JulyInvocationTargetException,
-            JulyNullPointerException{
+            throws PlutoNoSuchMethodException, 
+            PlutoSecurityException, 
+            PlutoIllegalAccessException, 
+            PlutoIllegalArgumentException, 
+            PlutoInvocationTargetException,
+            PlutoNullPointerException{
         try {
             if (methodArguments == null) {
                 Method method = methodClass.getDeclaredMethod(methodName);
@@ -70,17 +70,17 @@ public class MethodHandler {
             }
 
         } catch (NoSuchMethodException ex) {
-            throw new JulyNoSuchMethodException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoNoSuchMethodException(ExceptionHandler.getExceptionDetails(ex));
         } catch (SecurityException ex) {
-            throw new JulySecurityException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoSecurityException(ExceptionHandler.getExceptionDetails(ex));
         } catch (IllegalAccessException ex) {
-            throw new JulyIllegalAccessException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoIllegalAccessException(ExceptionHandler.getExceptionDetails(ex));
         } catch (IllegalArgumentException ex) {
-            throw new JulyIllegalArgumentException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoIllegalArgumentException(ExceptionHandler.getExceptionDetails(ex));
         } catch (InvocationTargetException ex) {
-            throw new JulyInvocationTargetException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoInvocationTargetException(ExceptionHandler.getExceptionDetails(ex));
         } catch (NullPointerException ex) {
-            throw new JulyNullPointerException(ExceptionHandler.getExceptionDetails(ex));
+            throw new PlutoNullPointerException(ExceptionHandler.getExceptionDetails(ex));
         }
     }
 

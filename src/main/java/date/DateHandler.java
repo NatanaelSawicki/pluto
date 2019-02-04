@@ -1,7 +1,7 @@
 package date;
 
-import enums.JulyDateFormatEnum;
-import customexceptions.JulyNoSuchDateFormatException;
+import enums.PlutoDateFormatEnum;
+import customexceptions.PlutoNoSuchDateFormatException;
 import java.time.LocalDate;
 import string.StringHandler;
 
@@ -25,9 +25,9 @@ public class DateHandler {
     }
 
     public static String formatDate(String date, 
-            JulyDateFormatEnum oldFormat, 
-            JulyDateFormatEnum param)
-            throws JulyNoSuchDateFormatException {
+            PlutoDateFormatEnum oldFormat, 
+            PlutoDateFormatEnum param)
+            throws PlutoNoSuchDateFormatException {
         date = applyDateValidation(date);
         String adjustedDate = "";
         switch(oldFormat){
@@ -51,7 +51,7 @@ public class DateHandler {
             case yyyy_dd_MM:
                 return ""+format[2]+"/"+format[0]+"/"+format[1];
             default:
-                throw new JulyNoSuchDateFormatException();
+                throw new PlutoNoSuchDateFormatException();
         }
     }
 
