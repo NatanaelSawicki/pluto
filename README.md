@@ -1,5 +1,12 @@
 # PLUTO
 Java Library with some cool tools and "bridges" to others libraries.
+Don't expect much from this library. Seriously, don't. 
+It could be useful if you know what you're doing, but i wouldn't recommend it for a newcomer in programming.
+Feel free to contribute, though.
+
+(It's a Gradle project, so be sure to get it's dependencies when pulling it, and make sure your IDE has support to Gradle Projects).
+
+(If you're willing to contribute, use english variables, camelCase on methods, PascalCase on classes, readable code, also JavaDoc if you find it necessary.)
 
 # Covered areas
 * XML, JSON and YAML parser (From/To Object)
@@ -28,8 +35,4 @@ Java Library with some cool tools and "bridges" to others libraries.
 * JavaDoc
 * JUnit Test Cases
 
-Don't expect much from this library. Seriously, don't. 
-It could be useful if you know what you're doing, but i wouldn't recommend it for a newcomer in programming.
-Feel free to contribute, though.
 
-(If you're willing to contribute, use english variables, camelCase on methods, PascalCase on classes, readable code, also JavaDoc if you find it necessary)
