@@ -9,7 +9,7 @@ Feel free to contribute, though.
 (If you're willing to contribute, use english variables, camelCase on methods, PascalCase on classes, readable code, also JavaDoc if you find it necessary.)
 
 # Covered areas
-* XML, JSON and YAML parser (From/To Object)
+* AVRO, CBOR, Ion, Protobuf, Smile, XML, JSON and YAML parser (From/To Object)
 * Object Serialization/Deserialization (using Base64)
 * Cryptography/Hashing
 * Date
@@ -20,6 +20,7 @@ Feel free to contribute, though.
 * System Variables/Properties
 * User custom properties
 * Cache
+* Logger
 * Database (SQL, DML and DDL)
 * File handler
 
@@ -29,7 +30,6 @@ Feel free to contribute, though.
 
 # WIP
 * Abstract method invocation
-* Logger
 * Science Constants (Math, Chemistry and Phisics)
 * Math Class
 * JavaDoc
