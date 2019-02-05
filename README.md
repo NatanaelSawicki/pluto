@@ -9,7 +9,9 @@ Feel free to contribute, though.
 
 (It's a Gradle project, so be sure to get it's dependencies when pulling it, and make sure your IDE has support to Gradle Projects).
 
-(If you're willing to contribute, use english variables, camelCase on methods, PascalCase on classes, readable code, also JavaDoc if you find it necessary.)
+(If you're willing to contribute, use english variables, camelCase on methods, PascalCase on classes, readable and clean code, also JavaDoc if you find it necessary.) 
+
+(If you're going to copy paste something, add a commentary on the method JavaDoc with the URL from where you took it.)
 
 # Covered areas
 * AVRO, CBOR, Ion, Protobuf, Smile, XML, JSON and YAML parser (From/To Object)
