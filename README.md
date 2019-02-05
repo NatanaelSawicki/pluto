@@ -25,7 +25,7 @@ Feel free to contribute, though.
 * File handler
 
 # Areas yet to be covered
-* Components (AWT)
+* Components Utils/Handler (AWT)
 * JFrame creation
 
 # WIP
