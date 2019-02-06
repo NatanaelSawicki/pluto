@@ -11,7 +11,7 @@ Feel free to contribute, though.
 
 (If you're willing to contribute, use english variables, camelCase on methods, PascalCase on classes, readable and clean code, also JavaDoc if you find it necessary.) 
 
-(If you're going to copy paste something, add a commentary on the method JavaDoc with the URL from where you took it.)
+(If you're going to copy paste something, add a commentary on the method's JavaDoc with the URL from where you took it.)
 
 # Covered areas
 * AVRO, CBOR, Ion, Protobuf, Smile, XML, JSON and YAML parser (From/To Object)
