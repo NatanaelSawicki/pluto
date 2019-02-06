@@ -2,12 +2,12 @@ package math;
 
 public class MathHandler {
 
-    public static double abs(Double b){
-        return Math.abs(b);
+    public static double abs(double a){
+        return Math.abs(a);
     }
     
-    public static long abs(Long b){
-        return Math.abs(b);
+    public static long abs(long a){
+        return Math.abs(a);
     }
     
     public static long addExact(long a, long b){
