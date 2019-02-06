@@ -32,6 +32,7 @@ Feel free to contribute, though.
 # Areas yet to be covered
 * Components Utils/Handler (AWT)
 * JFrame creation
+* Mail (javax.mail)
 
 # WIP
 * Abstract method invocation
