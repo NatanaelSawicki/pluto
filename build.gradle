@@ -59,6 +59,7 @@ dependencies {
     compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-ion', version: '2.9.8'
     // https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformats-binary
     compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformats-binary', version: '2.9.8', ext: 'pom'
-
+    // https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.4.0-b180830.0359'
     
 }
