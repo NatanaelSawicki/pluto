@@ -1,15 +1,20 @@
 # PLUTO
 Java Library with some cool tools and "bridges" to others libraries.
+
 Don't expect much from this library. Seriously, don't. 
+
 It could be useful if you know what you're doing, but i wouldn't recommend it for a newcomer in programming.
+
 Feel free to contribute, though.
 
 (It's a Gradle project, so be sure to get it's dependencies when pulling it, and make sure your IDE has support to Gradle Projects).
 
-(If you're willing to contribute, use english variables, camelCase on methods, PascalCase on classes, readable code, also JavaDoc if you find it necessary.)
+(If you're willing to contribute, use english variables, camelCase on methods, PascalCase on classes, readable and clean code, also JavaDoc if you find it necessary.) 
+
+(If you're going to copy paste something, add a commentary on the method's JavaDoc with the URL from where you took it.)
 
 # Covered areas
-* XML, JSON and YAML parser (From/To Object)
+* AVRO, CBOR, Ion, Protobuf, Smile, XML, JSON and YAML parser (From/To Object)
 * Object Serialization/Deserialization (using Base64)
 * Cryptography/Hashing
 * Date
@@ -20,16 +25,17 @@ Feel free to contribute, though.
 * System Variables/Properties
 * User custom properties
 * Cache
+* Logger
 * Database (SQL, DML and DDL)
 * File handler
 
 # Areas yet to be covered
-* Components (AWT)
+* Components Utils/Handler (AWT)
 * JFrame creation
+* Mail Reading/Sending (javax.mail)
 
 # WIP
 * Abstract method invocation
-* Logger
 * Science Constants (Math, Chemistry and Phisics)
 * Math Class
 * JavaDoc
