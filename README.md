@@ -32,6 +32,12 @@ Feel free to contribute, though.
 * Components Utils/Handler (AWT)
 * JFrame creation
 * Mail Reading/Sending (javax.mail)
+* MySQL Database Handling
+* PostgreSQL Database Handling
+* Oracle Database Handling
+* SQLite Database Handling
+* MongoDB Database Handling
+* MariaDB Database Handling
 
 # WIP
 * Abstract method invocation
