@@ -26,7 +26,6 @@ Feel free to contribute, though.
 * User custom properties
 * Cache
 * Logger
-* Database (SQL, DML and DDL)
 * File handler
 
 # Areas yet to be covered
