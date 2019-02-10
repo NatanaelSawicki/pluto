@@ -35,9 +35,7 @@ Feel free to contribute, though.
 # Areas yet to be covered
 * Components Utils/Handler (AWT)
 * JFrame creation
-* Mail Reading/Sending (javax.mail)
-* Oracle Database Handling
-* SQLite Database Handling
+
 
 # WIP
 * Abstract method invocation
@@ -45,5 +43,8 @@ Feel free to contribute, though.
 * Math Class
 * JavaDoc
 * JUnit Test Cases
+* Mail Reading/Sending (javax.mail)
+* Oracle Database Handling
+* SQLite Database Handling
 
 
