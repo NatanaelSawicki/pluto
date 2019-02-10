@@ -7,7 +7,7 @@ public class StringHandler {
         long occurrences = 0;
         String auxiliarVariable = text;
         while (auxiliarVariable.contains(textToLookFor)) {
-            auxiliarVariable = auxiliarVariable.replaceFirst(textToLookFor, "");
+            auxiliarVariable = auxiliarVariable.replace(textToLookFor, "");
             occurrences++;
         }
         return occurrences;
