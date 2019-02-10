@@ -10,16 +10,15 @@ public class PlutoNoEstablishedConnectionException extends Exception {
     public PlutoNoEstablishedConnectionException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoNoEstablishedConnectionException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

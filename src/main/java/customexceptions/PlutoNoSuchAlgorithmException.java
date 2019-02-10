@@ -10,16 +10,15 @@ public class PlutoNoSuchAlgorithmException extends Exception {
     public PlutoNoSuchAlgorithmException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoNoSuchAlgorithmException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

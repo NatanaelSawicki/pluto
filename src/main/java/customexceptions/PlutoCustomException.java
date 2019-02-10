@@ -10,15 +10,14 @@ public class PlutoCustomException extends Exception {
     public PlutoCustomException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoCustomException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
 }

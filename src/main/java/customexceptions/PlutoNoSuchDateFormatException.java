@@ -10,16 +10,15 @@ public class PlutoNoSuchDateFormatException extends Exception {
     public PlutoNoSuchDateFormatException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoNoSuchDateFormatException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

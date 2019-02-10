@@ -10,16 +10,15 @@ public class PlutoJSONProcessingException extends Exception {
     public PlutoJSONProcessingException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoJSONProcessingException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

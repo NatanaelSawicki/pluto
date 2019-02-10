@@ -10,16 +10,15 @@ public class PlutoNullPointerException extends Exception {
     public PlutoNullPointerException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoNullPointerException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

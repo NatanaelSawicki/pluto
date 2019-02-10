@@ -10,16 +10,15 @@ public class PlutoClassNotFoundException extends Exception {
     public PlutoClassNotFoundException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoClassNotFoundException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

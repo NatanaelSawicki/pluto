@@ -10,16 +10,15 @@ public class PlutoNoStatementToBeExecutedException extends Exception {
     public PlutoNoStatementToBeExecutedException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoNoStatementToBeExecutedException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

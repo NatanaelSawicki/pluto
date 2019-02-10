@@ -10,7 +10,6 @@ public class PlutoIonProcessingException extends Exception {
     public PlutoIonProcessingException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
@@ -18,7 +17,7 @@ public class PlutoIonProcessingException extends Exception {
         super(msg);
     }
 
-    public String getDetails(){
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
 

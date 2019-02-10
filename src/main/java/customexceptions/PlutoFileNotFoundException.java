@@ -10,16 +10,15 @@ public class PlutoFileNotFoundException extends Exception {
     public PlutoFileNotFoundException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoFileNotFoundException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

@@ -10,16 +10,15 @@ public class PlutoAvroMappingException extends Exception {
     public PlutoAvroMappingException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoAvroMappingException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

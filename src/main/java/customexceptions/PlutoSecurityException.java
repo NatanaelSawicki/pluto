@@ -10,16 +10,15 @@ public class PlutoSecurityException extends Exception {
     public PlutoSecurityException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoSecurityException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

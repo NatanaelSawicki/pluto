@@ -10,16 +10,15 @@ public class PlutoIllegalAccessException extends Exception {
     public PlutoIllegalAccessException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoIllegalAccessException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

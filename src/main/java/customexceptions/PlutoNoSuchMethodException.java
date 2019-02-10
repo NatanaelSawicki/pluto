@@ -10,16 +10,15 @@ public class PlutoNoSuchMethodException extends Exception {
     public PlutoNoSuchMethodException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoNoSuchMethodException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

@@ -10,16 +10,15 @@ public class PlutoNoSuchDatabaseEnum extends Exception {
     public PlutoNoSuchDatabaseEnum() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoNoSuchDatabaseEnum(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

@@ -10,16 +10,15 @@ public class PlutoJasperReportException extends Exception {
     public PlutoJasperReportException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoJasperReportException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

@@ -10,16 +10,15 @@ public class PlutoSmileProcessingException extends Exception {
     public PlutoSmileProcessingException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoSmileProcessingException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

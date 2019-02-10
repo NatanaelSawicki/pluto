@@ -10,16 +10,15 @@ public class PlutoSQLException extends Exception {
     public PlutoSQLException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoSQLException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

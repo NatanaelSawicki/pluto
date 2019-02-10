@@ -10,16 +10,15 @@ public class PlutoYAMLProcessingException extends Exception {
     public PlutoYAMLProcessingException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoYAMLProcessingException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

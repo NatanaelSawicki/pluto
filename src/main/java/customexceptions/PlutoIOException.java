@@ -10,16 +10,15 @@ public class PlutoIOException extends Exception {
     public PlutoIOException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoIOException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

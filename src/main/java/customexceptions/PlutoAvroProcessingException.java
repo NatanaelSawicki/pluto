@@ -10,16 +10,15 @@ public class PlutoAvroProcessingException extends Exception {
     public PlutoAvroProcessingException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoAvroProcessingException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }

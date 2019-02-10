@@ -10,16 +10,15 @@ public class PlutoCBORProcessingException extends Exception {
     public PlutoCBORProcessingException() {
     }
 
-
     /**
      * Detailed exception constructor.
      */
     public PlutoCBORProcessingException(String msg) {
         super(msg);
     }
-    
-    public String getDetails(){
+
+    public String getDetails() {
         return ExceptionHandler.getExceptionDetails(this);
     }
-    
+
 }
