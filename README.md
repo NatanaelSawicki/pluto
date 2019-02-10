@@ -30,6 +30,7 @@ Feel free to contribute, though.
 * MySQL Database Handling
 * PostgreSQL Database Handling
 * MariaDB Database Handling
+* MongoDB Database Handling
 
 # Areas yet to be covered
 * Components Utils/Handler (AWT)
@@ -37,7 +38,6 @@ Feel free to contribute, though.
 * Mail Reading/Sending (javax.mail)
 * Oracle Database Handling
 * SQLite Database Handling
-* MongoDB Database Handling
 
 # WIP
 * Abstract method invocation
