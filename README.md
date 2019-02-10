@@ -1,8 +1,6 @@
 # PLUTO
 Java Library with some cool tools and "bridges" to others libraries.
 
-Don't expect much from this library. Seriously, don't. 
-
 It could be useful if you know what you're doing, but i wouldn't recommend it for a newcomer in programming.
 
 Feel free to contribute, though.
@@ -27,23 +25,22 @@ Feel free to contribute, though.
 * Cache
 * Logger
 * File handler
+* Random number generation
 * MySQL Database Handling
 * PostgreSQL Database Handling
 * MariaDB Database Handling
 * MongoDB Database Handling
+* Math Class
 
 # Areas yet to be covered
 * Components Utils/Handler (AWT)
 * JFrame creation
 
-
 # WIP
 * Abstract method invocation
 * Science Constants (Math, Chemistry and Phisics)
-* Math Class
 * JavaDoc
 * JUnit Test Cases
-* Mail Reading/Sending (javax.mail)
 * Oracle Database Handling
 * SQLite Database Handling
 
