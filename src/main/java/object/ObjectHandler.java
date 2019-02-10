@@ -1,6 +1,8 @@
 package object;
 
 import java.util.HashMap;
+import java.util.Map;
+import org.bson.Document;
 
 public class ObjectHandler {
 
@@ -41,6 +43,14 @@ public class ObjectHandler {
     public static Object validateObject(Object in,
             Object out){
         return in == null ? out : in;
+    }
+    
+    public static Document mapToDocument(Map<String, Object> param){
+        Document documentReturn = new Document();
+        param.keySet().forEach((s) -> {
+            documentReturn.append(s, param.get(s));
+        });
+        return documentReturn;
     }
     
 }
