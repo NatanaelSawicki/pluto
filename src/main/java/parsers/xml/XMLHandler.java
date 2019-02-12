@@ -2,7 +2,6 @@ package parsers.xml;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
-import java.util.List;
 
 public class XMLHandler {
     
