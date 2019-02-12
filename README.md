@@ -43,5 +43,6 @@ Feel free to contribute, though.
 * JUnit Test Cases
 * Oracle Database Handling
 * SQLite Database Handling
+* SQLServer Database Handling
 
 
