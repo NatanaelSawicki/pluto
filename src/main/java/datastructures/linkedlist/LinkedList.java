@@ -75,6 +75,16 @@ public class LinkedList<T> implements Serializable {
         return returnVariable;
     }
     
+    public boolean contains(T value){
+        LinkedListNode<T> iteratorVariable = firstNode;
+        do{
+            if(iteratorVariable.getNodeData() == value){
+                return true;
+            }
+        }while( (iteratorVariable = iteratorVariable.getNextNode()) != null);
+        return false;
+    }
+    
     public String serialize() throws PlutoIOException{
         return SerializeHandler.serialize(this);
     }
