@@ -24,7 +24,7 @@ public class LoggingHandler {
             if (isError) {
                 sLog = "[ERROR] " + logMessage;
             } else {
-                sLog = "[ERROR] " + logMessage;
+                sLog = "[LOG] " + logMessage;
             }
         }
 
