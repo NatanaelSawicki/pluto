@@ -1,4 +1,4 @@
-package datastructures.linkedlist;
+package datastructures.structures.linkedlist;
 
 import customexceptions.PlutoIOException;
 import datastructures.common.LinkedListNode;
