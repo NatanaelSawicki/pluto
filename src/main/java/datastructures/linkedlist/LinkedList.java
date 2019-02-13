@@ -18,7 +18,7 @@ public class LinkedList<T> implements Serializable {
 
     public void push(T value) {
         LinkedListNode<T> newValue = new LinkedListNode<>(value);
-        
+
         if (firstNode == null && lastNode == null) {
             firstNode = newValue;
             lastNode = newValue;
@@ -32,7 +32,7 @@ public class LinkedList<T> implements Serializable {
 
     public void remove(T value) {
         LinkedListNode<T> newValue = new LinkedListNode<>(value);
-        if (size() != 0) {
+        if (size() != 0 && contains(value)) {
             LinkedListNode<T> nodeIterator = firstNode;
             while (nodeIterator.getNextNode() != null) {
                 if (nodeIterator.getNodeData() == value) {
@@ -57,9 +57,9 @@ public class LinkedList<T> implements Serializable {
         }
         long cont = 0;
         LinkedListNode<T> nodeIterator = firstNode;
-        do{ 
+        do {
             cont++;
-        }while ((nodeIterator = nodeIterator.getNextNode()) != null);
+        } while ((nodeIterator = nodeIterator.getNextNode()) != null);
         return cont;
     }
 
@@ -74,18 +74,18 @@ public class LinkedList<T> implements Serializable {
         } while ((iteratorVariable = iteratorVariable.getNextNode()) != null);
         return returnVariable;
     }
-    
-    public boolean contains(T value){
+
+    public boolean contains(T value) {
         LinkedListNode<T> iteratorVariable = firstNode;
-        do{
-            if(iteratorVariable.getNodeData() == value){
+        do {
+            if (iteratorVariable.getNodeData() == value) {
                 return true;
             }
-        }while( (iteratorVariable = iteratorVariable.getNextNode()) != null);
+        } while ((iteratorVariable = iteratorVariable.getNextNode()) != null);
         return false;
     }
-    
-    public String serialize() throws PlutoIOException{
+
+    public String serialize() throws PlutoIOException {
         return SerializeHandler.serialize(this);
     }
 
