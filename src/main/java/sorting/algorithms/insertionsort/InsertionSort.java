@@ -1,67 +1,35 @@
 package sorting.algorithms.insertionsort;
 
-public class InsertionSort {
-    
-    public static Long[] applyInsertionSortAscend(Long[] paramaterArray){
+public class InsertionSort<T extends Comparable<T>> {
+
+    public T[] applyInsertionSortAscend(T[] paramaterArray) {
         for (int i = 1; i < paramaterArray.length; i++) {
-            Long choosenElement = paramaterArray[i];
+            T choosenElement = paramaterArray[i];
             int j = i - 1;
-            while( (j >= 0) && 
-                    (paramaterArray[j] > choosenElement)){
-                paramaterArray[j+1] = paramaterArray[j];
+            while ((j >= 0)
+                    && (paramaterArray[j].compareTo(choosenElement)) > 0) {
+                paramaterArray[j + 1] = paramaterArray[j];
                 j--;
             }
-            paramaterArray[j+1] = choosenElement;
+            paramaterArray[j + 1] = choosenElement;
         }
-        
+
         return paramaterArray;
     }
-    
-    public static Long[] applyInsertionSortDescend(Long[] parameterArray){
+
+    public T[] applyInsertionSortDescend(T[] parameterArray) {
         for (int i = 1; i < parameterArray.length; i++) {
-            Long choosenElement = parameterArray[i];
+            T choosenElement = parameterArray[i];
             int j = i - 1;
-            while( (j >= 0) && 
-                    (parameterArray[j] < choosenElement)){
-                parameterArray[j+1] = parameterArray[j];
+            while ((j >= 0)
+                    && (parameterArray[j].compareTo(choosenElement)) < 0) {
+                parameterArray[j + 1] = parameterArray[j];
                 j--;
             }
-            parameterArray[j+1] = choosenElement;
+            parameterArray[j + 1] = choosenElement;
         }
-        
+
         return parameterArray;
     }
-    
-    
-    public static Double[] applyInsertionSortAscend(Double[] paramaterArray){
-        for (int i = 1; i < paramaterArray.length; i++) {
-            Double choosenElement = paramaterArray[i];
-            int j = i - 1;
-            while( (j >= 0) && 
-                    (paramaterArray[j] > choosenElement)){
-                paramaterArray[j+1] = paramaterArray[j];
-                j--;
-            }
-            paramaterArray[j+1] = choosenElement;
-        }
-        
-        return paramaterArray;
-    }
-    
-    public static Double[] applyInsertionSortDescend(Double[] parameterArray){
-        for (int i = 1; i < parameterArray.length; i++) {
-            Double choosenElement = parameterArray[i];
-            int j = i - 1;
-            while( (j >= 0) && 
-                    (parameterArray[j] < choosenElement)){
-                parameterArray[j+1] = parameterArray[j];
-                j--;
-            }
-            parameterArray[j+1] = choosenElement;
-        }
-        
-        return parameterArray;
-    }
-    
-    
+
 }
