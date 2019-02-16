@@ -12,6 +12,7 @@ public class ArrayLogger {
             LoggingHandler.log((String) iterador, false);
         }
         LoggingHandler.log("ARRAY CONTENT - END: ", false);
+        LoggingHandler.skipLine();
     }
     
     public static void log(String[] array){
@@ -22,6 +23,7 @@ public class ArrayLogger {
             LoggingHandler.log(iterador, false);
         }
         LoggingHandler.log("ARRAY CONTENT - END: ", false);
+        LoggingHandler.skipLine();
     }
     
     
@@ -33,6 +35,7 @@ public class ArrayLogger {
             LoggingHandler.log(String.valueOf(iterador), false);
         }
         LoggingHandler.log("ARRAY CONTENT - END: ", false);
+        LoggingHandler.skipLine();
     }
     
     public static void log(Double[] array){
@@ -43,6 +46,7 @@ public class ArrayLogger {
             LoggingHandler.log(String.valueOf(iterador), false);
         }
         LoggingHandler.log("ARRAY CONTENT - END: ", false);
+        LoggingHandler.skipLine();
     }
     
 }
