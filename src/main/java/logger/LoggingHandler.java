@@ -15,6 +15,10 @@ public class LoggingHandler {
         LoggingHandler.logginCache = logginCache;
     }
 
+    public static void skipLine(){
+        System.out.println("");
+    }
+    
     public static void log(String logMessage, boolean isError) {
         String sLog;
 
