@@ -31,6 +31,9 @@ Feel free to contribute, though.
 * MariaDB Database Handling
 * MongoDB Database Handling
 * Math Class
+* Data Structures
+* Sorting Algorithms
+* Search Algorithms
 
 # Areas yet to be covered
 * Components Utils/Handler (AWT)
@@ -44,8 +47,6 @@ Feel free to contribute, though.
 * Oracle Database Handling
 * SQLite Database Handling
 * SQLServer Database Handling
-* Data Structures
-* Sorting Algorithms
-* Search Algorithms
+
 
 
