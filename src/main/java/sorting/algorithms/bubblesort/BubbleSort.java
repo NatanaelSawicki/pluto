@@ -1,8 +1,5 @@
 package sorting.algorithms.bubblesort;
 
-import sorting.common.ArrayGenerator;
-import sorting.common.ArrayLogger;
-
 public class BubbleSort<T extends Comparable<T>> {
 
     public T[] applyBubbleSortAscend(T[] array) {
@@ -31,5 +28,5 @@ public class BubbleSort<T extends Comparable<T>> {
         }
         return array;
     }
-    
+
 }
